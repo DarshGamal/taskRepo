@@ -1,0 +1,8 @@
+[DEBUG] - [26-09-2025 22:51:58] [main] [org.testng.TestNG] - suiteXmlPath: "D:\ATOS\test.xml"
+[INFO] - [26-09-2025 22:51:58] [main] [utiles.ExtentReports.ExtentReportListener] - Test Execution Started.
+[WARN] - [26-09-2025 22:51:58] [main] [utiles.commonHelper.FilesUtils] - Directory does not existtest-output\reports
+[INFO] - [26-09-2025 22:51:58] [main] [utiles.commonHelper.FilesUtils] - Directory created: test-output\reports
+[INFO] - [26-09-2025 22:51:58] [main] [utiles.commonHelper.FilesUtils] - Directory already exists: test-output\Logs
+[INFO] - [26-09-2025 22:51:58] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  D:\ATOS\test.xml
+
