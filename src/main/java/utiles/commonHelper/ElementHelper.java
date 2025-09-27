@@ -176,5 +176,9 @@ public class ElementHelper {
         WebElement element = waitForVisibility(driver, locator);
         actions.moveToElement(element).perform();
     }
+    public static double parsePrice(String text) {
+        // Remove everything except digits and decimal point
+        return Double.parseDouble(text.replaceAll("[^0-9.]", ""));
+    }
     }
 

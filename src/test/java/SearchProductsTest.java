@@ -14,7 +14,7 @@ public class SearchProductsTest extends BaseTest {
         productsPage = new ProductsPage();
     }
 
-    @Test
+    @Test ()
     public void searchProducts() {
         productsPage.clickOnProductBtn()
                 .searchForProduct()

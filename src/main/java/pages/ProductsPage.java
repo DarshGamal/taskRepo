@@ -16,7 +16,9 @@ public class ProductsPage {
     By searchIcon = By.xpath("//button[@id='submit_search']");
     By searchResults = By.xpath("//div[@class='features_items']");
     By productDetailsBtn = By.xpath("//li/a[@href='/product_details/28']");
-
+    By product2=By.xpath("//img[@src='/get_product_picture/2']");
+    By addToCartBtn=By.xpath("//div[@class='productinfo text-center']/a[@data-product-id='2']");
+    By viewCartBtn=By.linkText("View Cart");
     public ProductsPage() {
         this.driver = DriverManager.getDriver();
     }
@@ -40,9 +42,9 @@ public class ProductsPage {
     }
 
     public ProductsPage clickOnProductDetails() {
-        ElementHelper.click(driver, productDetailsBtn);
-        System.out.println();
-        System.out.println();
+       // ElementHelper.click(driver, productDetailsBtn);
+        ElementHelper.scrollToElement(driver,productDetailsBtn);
+        ElementHelper.click(driver,productDetailsBtn);
 
         return this;
     }
@@ -54,6 +56,19 @@ public class ProductsPage {
         Assert.assertTrue(productDesc.isDisplayed(), "❌ Element not displayed:");
         Assert.assertTrue(productCategory.isDisplayed(), "❌ Element not displayed:");
         Assert.assertTrue(productPrice.isDisplayed(), "❌ Element not displayed:");
+        return this;
+    }
+    public ProductsPage hoverOnProduct2(){
+        ElementHelper.scrollToElement(driver,product2);
+        ElementHelper.hoverOver(driver,product2);
+        return this;
+    }
+    public ProductsPage clickOnAddToCartBtn(){
+        ElementHelper.click(driver,addToCartBtn);
+        return this;
+    }
+    public ProductsPage ViewCartPage(){
+        ElementHelper.click(driver,viewCartBtn);
         return this;
     }
 }

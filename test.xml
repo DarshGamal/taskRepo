@@ -21,4 +21,29 @@
             </class>
         </classes>
     </test>
+    <test name="AddToCart">
+        <classes>
+            <class name="AddToCartTest">
+                <methods>
+                    <include name="addProduct1ToCart">
+                    </include>
+                  <include name="addProduct2ToCart">
+                </include>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CheckOut">
+        <classes>
+            <class name="CheckOutTest">
+                <methods>
+                    <include name="ProceedToCheckout">
+                    </include>
+                    <include name="fillPaymentInfo">
+                    </include>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>

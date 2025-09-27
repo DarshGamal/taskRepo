@@ -51,7 +51,7 @@ public class ExtentReportListener implements ITestListener, IExecutionListener {
         if (test.get() != null) {
             test.get().log(Status.PASS, "✅ Test Passed in " +
                     (result.getEndMillis() - result.getStartMillis()) + " ms");
-            test.get().addScreenCaptureFromBase64String(captureScreenshot(), "Failure Screenshot");
+            test.get().addScreenCaptureFromBase64String(captureScreenshot(), "Success Screenshot");
         }
     }
 

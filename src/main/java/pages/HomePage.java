@@ -13,7 +13,7 @@ public HomePage() {
         this.driver = DriverManager.getDriver();
 
     }
-    //mostafa
+
 
     public void clickOnSignInUpLink() {
         ElementHelper.click(driver,SignInUp);
