@@ -19,7 +19,6 @@ public class SigninPage {
         global= Global.getInstance();
     }
     public  SigninPage EnterLoginEmail(String email){
-        LogsUtils.info("email entered : {}");
         ElementHelper.sendText(driver,LoginEmail,email);
         return this ;
     }

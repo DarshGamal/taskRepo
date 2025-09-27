@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Test SignInUp ">
-    <test name="SignIn">
+    <test name="SignInTests">
         <classes>
             <class name="SignInTest">
                 <methods>
@@ -11,25 +11,23 @@
             </class>
         </classes>
     </test>
-    <test name="searchProducts">
+    <test name="searchProductsTests">
         <classes>
             <class name="SearchProductsTest">
                 <methods>
-                    <include name="searchProducts">
-                    </include>
+                    <include name="searchProducts"/>
+                    <include name="verifyProductDetails"/>
                 </methods>
             </class>
         </classes>
     </test>
-    <test name="AddToCart">
+    <test name="AddToCartTests">
         <classes>
             <class name="AddToCartTest">
                 <methods>
-                    <include name="addProduct1ToCart">
-                    </include>
-                    <include name="addProduct2ToCart">
-                    </include>
-
+                    <include name="addProduct1ToCart"/>
+                    <include name="continueShopping"/>
+                    <include name="addProduct2ToCart"/>
                 </methods>
             </class>
         </classes>
@@ -38,10 +36,9 @@
         <classes>
             <class name="CheckOutTest">
                 <methods>
-                    <include name="ProceedToCheckout">
-                    </include>
-                    <include name="fillPaymentInfo">
-                    </include>
+                    <include name="ProceedToCheckout"/>
+                    <include name="fillPaymentInfo"/>
+                    <include name="submitOrderPayment"/>
                 </methods>
             </class>
         </classes>
@@ -50,10 +47,8 @@
         <classes>
             <class name="ContactusTest">
                 <methods>
-                    <include name="fillContactusInfo">
-                    </include>
-                    <include name="VerifySuccessConfirmationMessage">
-                    </include>
+                    <include name="fillContactusInfo"/>
+                    <include name="VerifySuccessConfirmationMessage"/>
                 </methods>
             </class>
         </classes>

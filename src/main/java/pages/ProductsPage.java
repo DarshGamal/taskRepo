@@ -64,6 +64,7 @@ public class ProductsPage {
         return this;
     }
     public ProductsPage clickOnAddToCartBtn(){
+        ElementHelper.scrollToElement(driver,addToCartBtn);
         ElementHelper.click(driver,addToCartBtn);
         return this;
     }

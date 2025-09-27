@@ -23,12 +23,16 @@ public class AddToCartTest extends BaseTest {
     public void addProduct1ToCart() {
         productsDetailsPage.chooseQuantity("2")
                 .clickOnAddToCartBtn()
-                .confirmSuccessMsg()
-                .clickOnContinueShoppingBtn();
+                .confirmSuccessMsg();
+
+    }
+    @Test(priority = 2)
+    public void continueShopping(){
+        productsDetailsPage .clickOnContinueShoppingBtn();
         productsPage.clickOnProductBtn();
     }
 
-    @Test(priority = 2)
+    @Test(priority = 3)
     public void addProduct2ToCart() {
         productsPage.hoverOnProduct2()
                 .clickOnAddToCartBtn()

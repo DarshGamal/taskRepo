@@ -14,12 +14,16 @@ public class SearchProductsTest extends BaseTest {
         productsPage = new ProductsPage();
     }
 
-    @Test ()
+    @Test(priority = 1)
     public void searchProducts() {
         productsPage.clickOnProductBtn()
-                .searchForProduct()
-                .validateSearchResults()
+                .searchForProduct();
+    }
+    @Test(priority = 2)
+    public void verifyProductDetails(){
+        productsPage.validateSearchResults()
                 .clickOnProductDetails()
                 .validateProductDetails();
+
     }
 }

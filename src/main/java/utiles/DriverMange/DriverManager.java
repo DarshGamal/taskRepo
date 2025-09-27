@@ -40,10 +40,10 @@ public class DriverManager {
         return driver;
     }
      static public void closeDriver() {
-        /* if (driver != null) {
+         if (driver != null) {
              System.out.println("Closing WebDriver...");
              driver.quit();
              driver = null;  // Set driver to null after quitting to indicate it's no longer available
-         }*/
+         }
     }
 }

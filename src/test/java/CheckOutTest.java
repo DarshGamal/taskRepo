@@ -14,10 +14,11 @@ import java.util.Iterator;
 public class CheckOutTest extends BaseTest {
     CheckOutPage checkOutPage;
     PaymentPage paymentPage;
+
     @BeforeTest
     public void setUp() {
         checkOutPage = new CheckOutPage();
-        paymentPage=new PaymentPage();
+        paymentPage = new PaymentPage();
     }
 
     @Test(priority = 1)
@@ -26,14 +27,22 @@ public class CheckOutTest extends BaseTest {
                 .addOrderComment("Please leave the package with the security guard.")
                 .clickOnPlaceOrderBtn();
     }
+
+
     @DataProvider
     public Iterator<Object[]> getData() throws IOException {
         return DataProviderUtils.getData("src/test/resources/test-data/Payment-data.json");
     }
-    @Test(priority = 2,dataProvider = "getData")
-    public void fillPaymentInfo(String NameOnCard,String CardNumber,String CVC,String ExpirationMonth,String ExpirationYear) {
-        paymentPage.fillPaymentData(NameOnCard,CardNumber,CVC,ExpirationMonth,ExpirationYear)
-                .clickOnPayBtn()
+
+    @Test(priority = 2, dataProvider = "getData")
+    public void fillPaymentInfo(String NameOnCard, String CardNumber, String CVC, String ExpirationMonth, String ExpirationYear) {
+        paymentPage.fillPaymentData(NameOnCard, CardNumber, CVC, ExpirationMonth, ExpirationYear);
+
+    }
+
+    @Test(priority = 3)
+    public void submitOrderPayment() {
+        paymentPage.clickOnPayBtn()
                 .assertOnSuccessfulMessage();
     }
 

@@ -22,7 +22,7 @@ public class SignInTest  extends  BaseTest{
     public Iterator<Object[]> getData() throws IOException {
         return DataProviderUtils.getData("src/test/resources/test-data/SignIn-data.json");
     }
-    @Test(testName = "SignIn", groups = "regression",dataProvider = "getData")
+    @Test(testName = "SignIn",dataProvider = "getData")
     public  void SignIn(String email,String pass){
         Home.clickOnSignInUpLink();
         SigninPage.EnterLoginEmail(email).enterLoginPassword(pass).clickOnLoginBtn();
