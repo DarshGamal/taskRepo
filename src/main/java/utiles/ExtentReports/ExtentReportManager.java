@@ -17,7 +17,7 @@ public  final class ExtentReportManager {
     public static ExtentReports getInstance() {
         if (extent == null) {
             String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-            String reportPath = "test-output/ExtentReport_" + timeStamp + ".html";
+            String reportPath = "test-output/reports/ExtentReport_" + timeStamp + ".html";
 
             ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
             sparkReporter.config().setTheme(Theme.STANDARD);

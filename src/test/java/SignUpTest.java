@@ -20,7 +20,7 @@ public class SignUpTest extends  BaseTest {
     }
  @DataProvider
  public Iterator<Object[]> getData() throws IOException {
-        return DataProviderUtils.getData("src/test/resources/SignupTestData.json");
+        return DataProviderUtils.getData("src/test/resources/test-data/SignupTestData.json");
  }
     @Test(testName = "Signup", groups = "regression",dataProvider = "getData")
     public  void signupHappyPathFlow (String Name,String Gender,String Day,String Month,String Year,

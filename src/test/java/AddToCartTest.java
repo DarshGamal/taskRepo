@@ -19,7 +19,7 @@ public class AddToCartTest extends BaseTest {
         cartPage=new CartPage();
     }
 
-    @Test()
+    @Test(priority = 1)
     public void addProduct1ToCart() {
         productsDetailsPage.chooseQuantity("2")
                 .clickOnAddToCartBtn()
@@ -28,7 +28,7 @@ public class AddToCartTest extends BaseTest {
         productsPage.clickOnProductBtn();
     }
 
-    @Test()
+    @Test(priority = 2)
     public void addProduct2ToCart() {
         productsPage.hoverOnProduct2()
                 .clickOnAddToCartBtn()

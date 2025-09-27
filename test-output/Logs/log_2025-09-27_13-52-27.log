@@ -1,8 +1,0 @@
-[DEBUG] - [27-09-2025 13:52:27] [main] [org.testng.TestNG] - suiteXmlPath: "D:\ATOS\test.xml"
-[INFO] - [27-09-2025 13:52:28] [main] [utiles.ExtentReports.ExtentReportListener] - Test Execution Started.
-[INFO] - [27-09-2025 13:52:28] [main] [utiles.commonHelper.FilesUtils] - Directory already exists: test-output\reports
-[INFO] - [27-09-2025 13:52:28] [main] [utiles.commonHelper.FilesUtils] - Directory already exists: test-output\Logs
-[INFO] - [27-09-2025 13:52:28] [main] [org.testng.internal.Utils] - [TestNG] Running:
-  D:\ATOS\test.xml
-
-[INFO] - [27-09-2025 13:53:26] [main] [pages.SigninPage] - email entered : {}

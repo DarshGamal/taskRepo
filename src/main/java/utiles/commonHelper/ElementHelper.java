@@ -17,11 +17,13 @@ public class ElementHelper {
      **/
 
     public static WebElement waitForVisibility(WebDriver driver, By locator) {
+        LogsUtils.info("waiting element to be visible: ", locator.toString());
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitingTime));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public static WebElement waitForClickable(WebDriver driver, By locator) {
+        LogsUtils.info("waiting element to be clickable: ", locator.toString());
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitingTime));
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
@@ -66,8 +68,10 @@ public class ElementHelper {
                 By.xpath("//*[text()='" + text + "']")));
 
     }
+
     public static WebElement findElementByValue(String value, WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitingTime));
+        LogsUtils.info("Finding element by value: ", value);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//*[@value='" + value + "']")));
     }
@@ -75,21 +79,22 @@ public class ElementHelper {
 
     public static WebElement findElementByTextContains(String text, WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitingTime));
+        LogsUtils.info("Finding element by Text Contains: ",text);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//*[contains(text(),'" + text + "')]")));
     }
 
     public static void click(WebDriver driver, By locator) {
+        LogsUtils.info("click On the Element : ",locator.toString());
         waitForClickable(driver, locator).click();
     }
 
-    public static void click(WebElement webElement) {
-        webElement.click();
-    }
 
-    public static void sendText( WebDriver driver, By locator,String text) {
+
+    public static void sendText(WebDriver driver, By locator, String text) {
         WebElement element = waitForVisibility(driver, locator);
         element.clear();
+        LogsUtils.info("Send data on the input: ",locator.toString());
         element.sendKeys(text);
     }
 
@@ -101,8 +106,11 @@ public class ElementHelper {
         return waitForVisibility(driver, locator).getText();
     }
 
-    public static  String getCurrentUrl(WebDriver driver){
-        return driver.getCurrentUrl();}
+    public static String getCurrentUrl(WebDriver driver) {
+        LogsUtils.info("get current url...");
+        return driver.getCurrentUrl();
+    }
+
     public static List<WebElement> getElements(WebDriver driver, By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitingTime));
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
@@ -131,8 +139,9 @@ public class ElementHelper {
      * -----------------------------
      **/
 
-    public static void selectFromDropDownByText( WebDriver driver, By locator ,String text) {
+    public static void selectFromDropDownByText(WebDriver driver, By locator, String text) {
         Select select = new Select(waitForClickable(driver, locator));
+        LogsUtils.info("Select from dropdown by text",locator.toString());
         select.selectByVisibleText(text);
     }
 
@@ -152,6 +161,7 @@ public class ElementHelper {
      * -----------------------------
      **/
     public static void scrollToElement(WebDriver driver, By locator) {
+        LogsUtils.info("Scroll to element: ",locator.toString());
         WebElement element = waitForVisibility(driver, locator);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
@@ -176,9 +186,10 @@ public class ElementHelper {
         WebElement element = waitForVisibility(driver, locator);
         actions.moveToElement(element).perform();
     }
+
     public static double parsePrice(String text) {
         // Remove everything except digits and decimal point
         return Double.parseDouble(text.replaceAll("[^0-9.]", ""));
     }
-    }
+}
 

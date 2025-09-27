@@ -20,7 +20,7 @@ public class CheckOutTest extends BaseTest {
         paymentPage=new PaymentPage();
     }
 
-    @Test()
+    @Test(priority = 1)
     public void ProceedToCheckout() {
         checkOutPage.clickOnCheckoutBtn()
                 .addOrderComment("Please leave the package with the security guard.")
@@ -28,9 +28,9 @@ public class CheckOutTest extends BaseTest {
     }
     @DataProvider
     public Iterator<Object[]> getData() throws IOException {
-        return DataProviderUtils.getData("src/test/resources/Payment-data.json");
+        return DataProviderUtils.getData("src/test/resources/test-data/Payment-data.json");
     }
-    @Test(dataProvider = "getData")
+    @Test(priority = 2,dataProvider = "getData")
     public void fillPaymentInfo(String NameOnCard,String CardNumber,String CVC,String ExpirationMonth,String ExpirationYear) {
         paymentPage.fillPaymentData(NameOnCard,CardNumber,CVC,ExpirationMonth,ExpirationYear)
                 .clickOnPayBtn()

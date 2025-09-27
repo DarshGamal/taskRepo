@@ -1,0 +1,79 @@
+[DEBUG] - [27-09-2025 17:23:52] [main] [org.testng.TestNG] - suiteXmlPath: "D:\ATOS\test.xml"
+[INFO] - [27-09-2025 17:23:53] [main] [utiles.ExtentReports.ExtentReportListener] - Test Execution Started.
+[INFO] - [27-09-2025 17:23:53] [main] [utiles.commonHelper.FilesUtils] - Directory already exists: test-output\reports
+[INFO] - [27-09-2025 17:23:53] [main] [utiles.commonHelper.FilesUtils] - Directory already exists: test-output\Logs
+[INFO] - [27-09-2025 17:23:53] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  D:\ATOS\test.xml
+
+[INFO] - [27-09-2025 17:24:15] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.linkText: Signup / Login
+[INFO] - [27-09-2025 17:24:15] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.linkText: Signup / Login
+[INFO] - [27-09-2025 17:24:18] [main] [pages.SigninPage] - email entered : {}
+[INFO] - [27-09-2025 17:24:18] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //input[@data-qa='login-email']
+[INFO] - [27-09-2025 17:24:18] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.xpath: //input[@data-qa='login-email']
+[INFO] - [27-09-2025 17:24:18] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //input[@data-qa='login-password']
+[INFO] - [27-09-2025 17:24:18] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.xpath: //input[@data-qa='login-password']
+[INFO] - [27-09-2025 17:24:18] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.xpath: //button[@data-qa='login-button']
+[INFO] - [27-09-2025 17:24:18] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.xpath: //button[@data-qa='login-button']
+[INFO] - [27-09-2025 17:24:38] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.xpath: //a[@href='/products']
+[INFO] - [27-09-2025 17:24:38] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.xpath: //a[@href='/products']
+[INFO] - [27-09-2025 17:24:57] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //input[@id='search_product']
+[INFO] - [27-09-2025 17:24:57] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.xpath: //input[@id='search_product']
+[INFO] - [27-09-2025 17:24:58] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.xpath: //button[@id='submit_search']
+[INFO] - [27-09-2025 17:24:58] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.xpath: //button[@id='submit_search']
+[INFO] - [27-09-2025 17:25:02] [main] [utiles.commonHelper.ElementHelper] - get current url...
+[INFO] - [27-09-2025 17:25:02] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //div[@class='features_items']
+[INFO] - [27-09-2025 17:25:02] [main] [utiles.commonHelper.ElementHelper] - Scroll to element:  By.xpath: //li/a[@href='/product_details/28']
+[INFO] - [27-09-2025 17:25:02] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //li/a[@href='/product_details/28']
+[INFO] - [27-09-2025 17:25:02] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.xpath: //li/a[@href='/product_details/28']
+[INFO] - [27-09-2025 17:25:02] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.xpath: //li/a[@href='/product_details/28']
+[INFO] - [27-09-2025 17:25:04] [main] [utiles.commonHelper.ElementHelper] - Finding element by Text Contains:  Category: Men
+[INFO] - [27-09-2025 17:25:04] [main] [utiles.commonHelper.ElementHelper] - Finding element by Text Contains:  1299
+[INFO] - [27-09-2025 17:25:04] [main] [utiles.commonHelper.ElementHelper] - Finding element by Text Contains:  Stock
+[INFO] - [27-09-2025 17:25:04] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.id: quantity
+[INFO] - [27-09-2025 17:25:04] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.id: quantity
+[INFO] - [27-09-2025 17:25:04] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.xpath: //button[@type='button']
+[INFO] - [27-09-2025 17:25:04] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.xpath: //button[@type='button']
+[INFO] - [27-09-2025 17:25:04] [main] [utiles.commonHelper.ElementHelper] - Finding element by Text Contains:  Your product has been added to cart
+[INFO] - [27-09-2025 17:25:05] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.xpath: //button[@data-dismiss='modal']
+[INFO] - [27-09-2025 17:25:05] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.xpath: //button[@data-dismiss='modal']
+[INFO] - [27-09-2025 17:25:05] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.xpath: //a[@href='/products']
+[INFO] - [27-09-2025 17:25:05] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.xpath: //a[@href='/products']
+[INFO] - [27-09-2025 17:25:15] [main] [utiles.commonHelper.ElementHelper] - Scroll to element:  By.xpath: //img[@src='/get_product_picture/2']
+[INFO] - [27-09-2025 17:25:15] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //img[@src='/get_product_picture/2']
+[INFO] - [27-09-2025 17:25:15] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //img[@src='/get_product_picture/2']
+[INFO] - [27-09-2025 17:25:15] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.xpath: //div[@class='productinfo text-center']/a[@data-product-id='2']
+[INFO] - [27-09-2025 17:25:15] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.xpath: //div[@class='productinfo text-center']/a[@data-product-id='2']
+[INFO] - [27-09-2025 17:25:15] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.linkText: View Cart
+[INFO] - [27-09-2025 17:25:15] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.linkText: View Cart
+[INFO] - [27-09-2025 17:25:17] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.cssSelector: table.table-condensed tbody
+[INFO] - [27-09-2025 17:25:20] [main] [utiles.commonHelper.ElementHelper] - Scroll to element:  By.xpath: //textarea
+[INFO] - [27-09-2025 17:25:20] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //textarea
+[INFO] - [27-09-2025 17:25:20] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //textarea
+[INFO] - [27-09-2025 17:25:20] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.xpath: //textarea
+[INFO] - [27-09-2025 17:25:20] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.linkText: Place Order
+[INFO] - [27-09-2025 17:25:20] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.linkText: Place Order
+[INFO] - [27-09-2025 17:25:22] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //input[@data-qa='name-on-card']
+[INFO] - [27-09-2025 17:25:22] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.xpath: //input[@data-qa='name-on-card']
+[INFO] - [27-09-2025 17:25:22] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //input[@data-qa='card-number']
+[INFO] - [27-09-2025 17:25:22] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.xpath: //input[@data-qa='card-number']
+[INFO] - [27-09-2025 17:25:22] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //input[@data-qa='cvc']
+[INFO] - [27-09-2025 17:25:22] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.xpath: //input[@data-qa='cvc']
+[INFO] - [27-09-2025 17:25:22] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //input[@data-qa='expiry-month']
+[INFO] - [27-09-2025 17:25:22] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.xpath: //input[@data-qa='expiry-month']
+[INFO] - [27-09-2025 17:25:23] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //input[@data-qa='expiry-year']
+[INFO] - [27-09-2025 17:25:23] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.xpath: //input[@data-qa='expiry-year']
+[INFO] - [27-09-2025 17:25:23] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.xpath: //button[@data-qa='pay-button']
+[INFO] - [27-09-2025 17:25:23] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.xpath: //button[@data-qa='pay-button']
+[INFO] - [27-09-2025 17:25:25] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.xpath: //a[@href='/contact_us']
+[INFO] - [27-09-2025 17:25:25] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.xpath: //a[@href='/contact_us']
+[INFO] - [27-09-2025 17:25:30] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //input[@data-qa='name']
+[INFO] - [27-09-2025 17:25:30] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.xpath: //input[@data-qa='name']
+[INFO] - [27-09-2025 17:25:30] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //input[@data-qa='email']
+[INFO] - [27-09-2025 17:25:30] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.xpath: //input[@data-qa='email']
+[INFO] - [27-09-2025 17:25:30] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //input[@data-qa='subject']
+[INFO] - [27-09-2025 17:25:30] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.xpath: //input[@data-qa='subject']
+[INFO] - [27-09-2025 17:25:31] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //textarea[@data-qa='message']
+[INFO] - [27-09-2025 17:25:31] [main] [utiles.commonHelper.ElementHelper] - Send data on the input:  By.xpath: //textarea[@data-qa='message']
+[INFO] - [27-09-2025 17:25:31] [main] [utiles.commonHelper.ElementHelper] - click On the Element :  By.xpath: //input[@data-qa='submit-button']
+[INFO] - [27-09-2025 17:25:31] [main] [utiles.commonHelper.ElementHelper] - waiting element to be clickable:  By.xpath: //input[@data-qa='submit-button']
+[INFO] - [27-09-2025 17:25:31] [main] [utiles.commonHelper.ElementHelper] - waiting element to be visible:  By.xpath: //div[@class='status alert alert-success']

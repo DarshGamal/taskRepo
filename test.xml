@@ -27,8 +27,8 @@
                 <methods>
                     <include name="addProduct1ToCart">
                     </include>
-                  <include name="addProduct2ToCart">
-                </include>
+                    <include name="addProduct2ToCart">
+                    </include>
 
                 </methods>
             </class>
@@ -41,6 +41,18 @@
                     <include name="ProceedToCheckout">
                     </include>
                     <include name="fillPaymentInfo">
+                    </include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Contactus">
+        <classes>
+            <class name="ContactusTest">
+                <methods>
+                    <include name="fillContactusInfo">
+                    </include>
+                    <include name="VerifySuccessConfirmationMessage">
                     </include>
                 </methods>
             </class>
