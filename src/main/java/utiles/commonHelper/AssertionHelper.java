@@ -3,6 +3,7 @@ package utiles.commonHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class AssertionHelper {
@@ -13,6 +14,14 @@ public class AssertionHelper {
             Assert.assertTrue(isDisplayed, "❌ Element not displayed: " + locator);
         } catch (NoSuchElementException e) {
             Assert.fail("❌ Element not found: " + locator);
+        }
+    }
+    public static void assertWebElementPresent(WebDriver driver, WebElement element) {
+        try {
+            //boolean isDisplayed = ElementHelper.waitForVisibility(driver, locator).isDisplayed();
+            Assert.assertTrue(element.isDisplayed(), "❌ Element not displayed: " + element);
+        } catch (NoSuchElementException e) {
+            Assert.fail("❌ Element not found: " + element);
         }
     }
     // Assert current URL matches expected URL

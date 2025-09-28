@@ -3,6 +3,7 @@ package utiles.commonHelper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
+import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.List;
@@ -187,9 +188,7 @@ public class ElementHelper {
         actions.moveToElement(element).perform();
     }
 
-    public static double parsePrice(String text) {
-        // Remove everything except digits and decimal point
-        return Double.parseDouble(text.replaceAll("[^0-9.]", ""));
-    }
+
+
 }
 

@@ -53,4 +53,13 @@
             </class>
         </classes>
     </test>
+    <test name="Logout">
+        <classes>
+            <class name="LogoutTest">
+                <methods>
+                    <include name="clickOnLogoutBtn"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>

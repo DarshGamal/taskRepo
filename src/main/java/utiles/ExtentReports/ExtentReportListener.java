@@ -32,6 +32,11 @@ public class ExtentReportListener implements ITestListener, IExecutionListener {
         FilesUtils.createDirectory(logs);
         //FilesUtils.createDirectory(screenshots);
     }
+    @Override
+    public void onExecutionFinish() {
+        LogsUtils.info("Test Execution Finished.");
+
+    }
 
     @Override
     public void onTestStart(ITestResult result) {
@@ -53,6 +58,8 @@ public class ExtentReportListener implements ITestListener, IExecutionListener {
                     (result.getEndMillis() - result.getStartMillis()) + " ms");
             test.get().addScreenCaptureFromBase64String(captureScreenshot(), "Success Screenshot");
         }
+        LogsUtils.info("Test case", result.getName(), "passed");
+
     }
 
     @Override
@@ -61,6 +68,7 @@ public class ExtentReportListener implements ITestListener, IExecutionListener {
             test.get().log(Status.FAIL, "❌ Test Failed: " + result.getThrowable());
             test.get().addScreenCaptureFromBase64String(captureScreenshot(), "Failure Screenshot");
         }
+        LogsUtils.info("Test case", result.getName(), "failed");
     }
 
     @Override
@@ -68,6 +76,8 @@ public class ExtentReportListener implements ITestListener, IExecutionListener {
         if (test.get() != null) {
             test.get().log(Status.SKIP, "⚠️ Test Skipped: " + result.getThrowable());
         }
+        LogsUtils.info("Test case", result.getName(), "skipped");
+
     }
 
     @Override

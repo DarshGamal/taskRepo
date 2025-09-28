@@ -11,23 +11,27 @@ import utiles.commonHelper.LogsUtils;
 public class SigninPage {
     WebDriver driver;
     Global global;
-    By LoginEmail =By.xpath("//input[@data-qa='login-email']");
-    By  LoginPassword=By.xpath("//input[@data-qa='login-password']");
-    By LoginButton =By.xpath("//button[@data-qa='login-button']");
-    public  SigninPage( ){
-        this.driver= DriverManager.getDriver();
-        global= Global.getInstance();
+    By LoginEmail = By.xpath("//input[@data-qa='login-email']");
+    By LoginPassword = By.xpath("//input[@data-qa='login-password']");
+    By LoginButton = By.xpath("//button[@data-qa='login-button']");
+
+    public SigninPage() {
+        this.driver = DriverManager.getDriver();
+        global = Global.getInstance();
     }
-    public  SigninPage EnterLoginEmail(String email){
-        ElementHelper.sendText(driver,LoginEmail,email);
-        return this ;
+
+    public SigninPage EnterLoginEmail(String email) {
+        ElementHelper.sendText(driver, LoginEmail, email);
+        return this;
     }
-    public SigninPage enterLoginPassword(String pass){
-        ElementHelper.sendText(driver,LoginPassword,pass);
-        return this ;
+
+    public SigninPage enterLoginPassword(String pass) {
+        ElementHelper.sendText(driver, LoginPassword, pass);
+        return this;
     }
-    public SigninPage  clickOnLoginBtn() {
-        ElementHelper.click(driver,LoginButton);
-        return this ;
+
+    public SigninPage clickOnLoginBtn() {
+        ElementHelper.click(driver, LoginButton);
+        return this;
     }
 }

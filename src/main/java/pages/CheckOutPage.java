@@ -26,6 +26,7 @@ public class CheckOutPage {
     }
 
     public CheckOutPage clickOnPlaceOrderBtn() {
+        ElementHelper.scrollToElement(driver,placeOrderBtn);
         ElementHelper.click(driver, placeOrderBtn);
         return this;
     }
