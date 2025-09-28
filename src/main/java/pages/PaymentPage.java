@@ -30,7 +30,7 @@ public class PaymentPage {
     }
 
     public PaymentPage clickOnPayBtn() {
-        ElementHelper.scrollToElement(driver,payBtn);
+        ElementHelper.scrollToElement(driver, payBtn);
         ElementHelper.click(driver, payBtn);
         return this;
     }

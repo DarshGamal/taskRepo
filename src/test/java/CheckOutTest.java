@@ -24,6 +24,7 @@ public class CheckOutTest extends BaseTest {
     @Test(priority = 1)
     public void ProceedToCheckout() {
         checkOutPage.clickOnCheckoutBtn()
+                .reviewDeliveryAddress()
                 .addOrderComment("Please leave the package with the security guard.")
                 .clickOnPlaceOrderBtn();
     }

@@ -9,13 +9,13 @@ public class HomePage {
     WebDriver driver;
     By SignInUp = By.linkText("Signup / Login");
 
-public HomePage() {
+    public HomePage() {
         this.driver = DriverManager.getDriver();
 
     }
 
 
     public void clickOnSignInUpLink() {
-        ElementHelper.click(driver,SignInUp);
+        ElementHelper.click(driver, SignInUp);
     }
 }

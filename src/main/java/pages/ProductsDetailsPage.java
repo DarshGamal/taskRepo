@@ -17,6 +17,7 @@ public class ProductsDetailsPage {
     By productDetailsCategory = By.xpath("//div[@class='product-information']/p[contains(text(),'Category')]");
     By productDetailsPrice = By.cssSelector(".product-information span span");
     By productDetailsDesc = By.xpath("//div[@class='product-information']/p[not(contains(text(),'Category'))]");
+
     public ProductsDetailsPage() {
         this.driver = DriverManager.getDriver();
     }
@@ -41,6 +42,7 @@ public class ProductsDetailsPage {
         ElementHelper.click(driver, continueShoppingBtn);
         return this;
     }
+
     public ProductsDetailsPage validateProductDetails() {
         ActionsHelper.checkProductDetailsInfo(driver, productDetailsName, productDetailsCategory,
                 productDetailsPrice, productDetailsDesc);

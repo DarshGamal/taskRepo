@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import utiles.DriverMange.DriverManager;
 import utiles.commonHelper.AssertionHelper;
 import utiles.commonHelper.ElementHelper;
+import utiles.commonHelper.LogsUtils;
+import utiles.config.LoadProperties;
 
 public class ContactusPage {
     WebDriver driver;
@@ -15,7 +17,8 @@ public class ContactusPage {
     By subject = By.xpath("//input[@data-qa='subject']");
     By message = By.xpath("//textarea[@data-qa='message']");
     By submitBtn = By.xpath("//input[@data-qa='submit-button']");
-    By actualMessage=By.xpath("//div[@class='status alert alert-success']");
+    By actualMessage = By.xpath("//div[@class='status alert alert-success']");
+
     public ContactusPage() {
         this.driver = DriverManager.getDriver();
     }
@@ -35,14 +38,17 @@ public class ContactusPage {
 
     public ContactusPage clickOnSubmitBtn() {
         ElementHelper.click(driver, submitBtn);
-        Alert alert=this.driver.switchTo().alert();
+        Alert alert = this.driver.switchTo().alert();
         alert.accept();
         return this;
     }
-    public ContactusPage assertOnSuccessfulMessage(){
-        String actual=ElementHelper.findElementBy(driver,actualMessage).getText();
-        String expected="Success! Your details have been submitted successfully.";
-        AssertionHelper.assertEqual(actual,expected);
+
+    public ContactusPage assertOnSuccessfulMessage() {
+        String actual = ElementHelper.findElementBy(driver, actualMessage).getText();
+        LogsUtils.info("Actual message: ",actual);
+        String expected = LoadProperties.getProperty("ContactusSuccessfulMsg");
+        LogsUtils.info("Expected message: ",expected);
+        AssertionHelper.assertEqual(actual, expected);
         return this;
     }
 

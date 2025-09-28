@@ -33,11 +33,12 @@ public class AddToCartTest extends BaseTest {
     }
 
     @Test(priority = 3)
-    public void addProduct2ToCart() {
+    public void addProduct2ToCart(){
         productsPage.hoverOnProduct2()
                 .clickOnAddToCartBtn()
                 .ViewCartPage();
-        cartPage.verifyProductsOnCartPage();
+        cartPage.verifyProductsOnCartPage()
+                .CheckCartBadgeUpdates();
     }
 
 }

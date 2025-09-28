@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import utiles.DriverMange.DriverManager;
 import utiles.commonHelper.AssertionHelper;
 import utiles.commonHelper.ElementHelper;
+import utiles.config.LoadProperties;
 
 public class LogoutPage {
     WebDriver driver;
@@ -20,7 +21,7 @@ public class LogoutPage {
     }
 
     public LogoutPage verifyRedirectionAfterLogout() {
-        AssertionHelper.assertUrl(driver, "https://www.automationexercise.com/login");
+        AssertionHelper.assertUrl(driver, LoadProperties.getProperty("LoginUrl"));
         return this;
     }
 }

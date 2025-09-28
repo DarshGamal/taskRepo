@@ -8,6 +8,7 @@ import utiles.commonHelper.ActionsHelper;
 import utiles.commonHelper.AssertionHelper;
 import utiles.commonHelper.ElementHelper;
 import utiles.commonHelper.LogsUtils;
+import utiles.config.LoadProperties;
 
 import java.util.List;
 
@@ -36,7 +37,7 @@ public class ProductsPage {
     public ProductsPage validateItemsLoaded() {
         ElementHelper.waitForVisibility(driver, productsLocator);
         List<WebElement> products = driver.findElements(productsLocator);
-        LogsUtils.info("number of products in page :"+products.size());
+        LogsUtils.info("number of products in page :" + products.size());
         ActionsHelper.validateItemsDisplayed(products, productPrice, productImg);
         return this;
     }
@@ -48,10 +49,10 @@ public class ProductsPage {
     }
 
     public ProductsPage validateSearchResults() {
-        AssertionHelper.assertUrl(driver, "https://www.automationexercise.com/products?search=T-shirt");
+        AssertionHelper.assertUrl(driver, LoadProperties.getProperty("SearchedUrl"));
         ElementHelper.waitForVisibility(driver, productsLocator);
         List<WebElement> products = driver.findElements(productsLocator);
-        LogsUtils.info("number of products After search :"+products.size());
+        LogsUtils.info("number of products After search :" + products.size());
         ActionsHelper.validateItemsDisplayed(products, productPrice, productImg);
         return this;
     }
@@ -62,7 +63,6 @@ public class ProductsPage {
 
         return this;
     }
-
 
 
     public ProductsPage hoverOnProduct2() {
